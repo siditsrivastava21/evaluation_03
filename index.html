@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiroto</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .infomation {
+        width: auto;
+        height: 45px;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .location_info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .location_info p {
+        margin-left: 30px;
+      }
+      .login_info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        float: right;
+      }
+      .login_info p {
+        margin-left: 25px;
+      }
+
+      .navbar_section {
+        width: auto;
+        height: 80px;
+        background-color: #1a1a1a;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .logo_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 65px;
+      }
+
+      .navbar_category ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+
+      .navbar_category ul li {
+        margin-left: 55px;
+      }
+
+      .book_now_btn {
+        width: 110px;
+        height: 45px;
+      }
+
+      .home_section {
+        width: auto;
+        height: 100vh;
+        background-image: url(./image/home_img.webp);
+        background-position: center;
+        background-size: cover;
+        /* text-align: center; */
+        justify-content: center;
+        align-items: center;
+      }
+
+      .welcome_note {
+        color: #ebb43d;
+        padding-top: 130px;
+        text-align: center;
+      }
+
+      .taglines {
+        color: #fff;
+        font-size: 70px;
+        padding-top: 35px;
+        text-align: center;
+      }
+
+      .search_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: 0px;
+      }
+      .search {
+        width: 1100px;
+        height: 150px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .check_in {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .search_title {
+        margin-left: 20px;
+        margin-right: 30px;
+      }
+
+      .search_title input {
+        margin-top: 30px;
+        width: 180px;
+        height: 35px;
+        max-width: 180px;
+      }
+      .book_now {
+        width: 100%;
+        height: 100%;
+        background-color: #1a1a1a;
+        text-align: center;
+      }
+      .book_now button {
+        width: 100%;
+        height: 100%;
+        background-color: #1d1c1c;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      .second_section {
+        width: auto;
+        height: auto;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .about_info {
+        font-size: 20px;
+      }
+      .about_info h4 {
+        color: #ebb43d;
+      }
+      .about_info h1 {
+        padding-top: 35px;
+      }
+      .about_info p {
+        color: grey;
+        padding-top: 15px;
+      }
+
+      .about_info img {
+        margin-top: 30px;
+      }
+
+      .img-section img {
+        height: 600px;
+        z-index: 99;
+        margin-bottom: 00px;
+      }
+      .third-section {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* padding-top: 50px; */
+        margin-bottom: 50px;
+      }
+      .facilities {
+        padding-left: 100px;
+        padding-top: 80px;
+      }
+      .facilities img {
+        width: 50px;
+      }
+
+      .facilities p {
+        padding-top: 5px;
+        color: grey;
+      }
+
+      .fourth-section {
+        width: auto;
+        height: auto;
+        background-color: #fff;
+        padding-top: 100px;
+        text-align:center ;
+        margin-bottom: 30px;
+      }
+
+      .fourth-section h4 {
+        padding-top: 20px;
+        text-align: center;
+        color: #ebb43d;
+      }
+      .fourth-section h1 {
+        text-align: center;
+        padding-top: 30px;
+      }
+      .room_img {
+        padding-left: 20px;
+        padding-top: 80px;
+      }
+      .room_img img {
+        width: 370px;
+      }
+
+      .offer-section {
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .explore_now_btn button {
+        width: 150px;
+        height: 50px;
+        background-color: #ebb43d;
+        color: #fff;
+        outline: none;
+        font-weight: 600;
+      }
+
+      .seventh-section{
+        width:auto;
+        height:auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        background-image: url(./image/seventh.webp);
+        margin-bottom: 50px;
+      }
+
+      .seventh-section h4{
+        padding-top: 10px;
+        color: #ebb43d;
+
+      }
+
+      .seventh-section h1{
+        padding-top: 20px;
+        color: white;
+
+      }
+
+      .booking_now_btn{
+        width:150px;
+        margin-top: 50px;
+        height: 50px;
+      }
+
+      .eight-section{
+        width:auto;
+        height:auto;
+        background-color: #fff;
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+
+      .left-side-eight h4{
+        padding-top: 10px;
+        color: #ebb43d;
+
+      }
+
+      .left-side-eight h1{
+        padding-top: 20px;
+      }
+
+      .right-side-eight p{
+        padding-top: 10px;
+        color:grey
+        
+      }
+      .view_gallery{
+        width:150px;
+        margin-top: 30px;
+        height:50px;
+        background-color: #ebb43d;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .gallery-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        margin-bottom: 50px;
+      }
+      .gallery-section img{
+        width:360px;
+        margin-left: 10px;
+      }
+
+      .tenth-section{
+        width:auto;
+        height:auto;
+        background-color: #fff;
+        margin-bottom: 50px;
+      }
+
+      .title{
+        padding-top: 50px;
+      }
+
+      .title h4{
+        color:#ebb43d;
+        padding-top: 10px;
+        text-align: center;
+      }
+      .title h1{
+        padding-top: 20px;
+        text-align: center;
+      }
+
+      .blog-section{
+        width: auto;
+        height: auto;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 50px;
+        padding-top: 50px;
+      }
+
+
+      .blog-card{
+        width:300px;
+        background-color: rgb(237, 236, 236);
+        height: 300px;
+      }
+
+      .blog-card h3{
+        padding-top: 50px;
+        padding-left: 10px;
+      }
+      .blog-card h2{
+        padding-top: 20px;
+        padding-left: 10px;
+      }
+
+      .blog-card p{
+        padding-top: 30px;
+        padding-left: 10px;
+        color: grey;
+    }
+
+      .blog-card h4{
+        padding-top: 30px;
+        padding-left: 10px;
+        text-decoration: underline;
+
+      }
+
+      .footer-section{
+        width:auto;
+        height:400px;
+        background-image: url(./image/footer.webp);
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <navbar>
+      <div class="infomation">
+        <div class="location_info">
+          <p>96 Ernser Vista Suite 437, NY , US</p>
+          <p>(123) 456-78-910</p>
+        </div>
+
+        <div class="login_info">
+          <p>Login</p>
+          <p>Register</p>
+          <p>English</p>
+        </div>
+      </div>
+      <div class="navbar_section">
+        <div class="logo_section">
+          <img />
+          <h1>Hiroto</h1>
+        </div>
+        <div class="navbar_category">
+          <ul>
+            <li style="color: #ebb43d">Home</li>
+            <li>Rooms</li>
+            <li>About Us</li>
+            <li>Pages</li>
+            <li>News</li>
+            <li>Contact</li>
+            <li><button class="book_now_btn">Books Now -></button></li>
+          </ul>
+        </div>
+      </div>
+    </navbar>
+
+    <home-section>
+      <div class="home_section">
+        <h3 class="welcome_note">WELCOME HIROTO</h3>
+        <h1 class="taglines">
+          Experience the greatest <br />for you holidays.
+        </h1>
+
+        <div class="search_section">
+          <div class="search">
+            <div class="check_in">
+              <div class="search_title">
+                <p>Location</p>
+                <input type="text" placeholder="Search Location" />
+              </div>
+              <div class="search_title">
+                <p>Check In</p>
+                <input type="date" />
+              </div>
+              <div class="search_title">
+                <p>Check Out</p>
+                <input type="date" />
+              </div>
+              <div class="search_title">
+                <p>Person</p>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="book_now">
+              <button>Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </home-section>
+
+    <second_section>
+      <div class="second_section">
+        <div class="about_info">
+          <h4>ABOUT US</h4>
+          <h1>
+            Welcome Hiroto Hotel In Street <br />
+            L'Abreuvoir
+          </h1>
+          <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit.
+            <br />sed quia consequuntur magni dolores eos qui ratione voluptatem
+            sequi <br />nesciunt.
+          </p>
+          <p>
+            Sed ut perspiciants unde omins iste natus error sit voluptatem
+            accusantium <br />
+            doloremque.
+          </p>
+          <img src="./image/sign.png" />
+        </div>
+        <div class="img-section">
+          <img src="./image/about_first_img.webp" alt="first_img" />
+          <!-- <img src="./image/about_second_img.webp" alt="second_img"> -->
+        </div>
+      </div>
+    </second_section>
+
+    <third-section>
+      <div class="third-section">
+        <div class="facilities">
+          <img src="./image/wifi.png" />
+          <h1>Free Wi-Fi</h1>
+          <p>
+            The massive investment in a Hotel or resort <br />
+            require constant revirew and control in order to
+            <br />
+            make it a successfull investment
+          </p>
+        </div>
+        <div class="facilities">
+          <img src="./image/pool.png" />
+          <h1>Premium Pool</h1>
+          <p>
+            Choose from 4 unique ready made concepts, let
+            <br />
+            us help you create the concept perfect for you or
+            <br />let HCA.
+          </p>
+        </div>
+        <div class="facilities">
+          <img src="./image/coffe.png" />
+          <h1>Coffee Maker</h1>
+          <p>
+            HCA's Owner's Representation is taking care of
+            <br />
+            just these important factors, may it be through <br />regular site
+            visits and spot checks.
+          </p>
+        </div>
+        <div class="facilities">
+          <img src="./image/wine.png" />
+          <h1>Bar Wine</h1>
+          <p>
+            For properties with third party management
+            <br />
+            companies, HCA Consultants will as well <br />
+            administer the terms and conditions.
+          </p>
+        </div>
+        <div class="facilities">
+          <img src="./image/tv.png" />
+          <h1>TV HD</h1>
+          <p>
+            We provide a critical analysis of a hotel's <br />marketing
+            strategy, bench-marking it against <br />
+            industry and competitive practices.
+          </p>
+        </div>
+        <div class="facilities">
+          <img src="./image/res.png" />
+          <h1>Resturants</h1>
+          <p>
+            A hotel and restaurant investment deserves <br />careful and market
+            oriented financial planning <br />and projections.
+          </p>
+        </div>
+      </div>
+    </third-section>
+
+    <fourth-section>
+      <div class="fourth-section">
+        <h4>OUR ROOM</h4>
+        <h1 class="room-taglines">Explore Our Hotel</h1>
+        <div class="room_img">
+          <img src="./image/room.webp" alt="room_img" />
+          <img src="./image/room1.webp" alt="room_img" />
+          <img src="./image/room2.webp" alt="room_img" />
+          <img src="./image/room3.webp" alt="room_img" />
+        </div>
+      </div>
+    </fourth-section>
+
+    <firth-section>
+      <div class="offer-section">
+        <div class="offer">
+          <h2>Planning your next trip? Save up to 25% in your hotel</h2>
+        </div>
+        <div class="explore_now_btn">
+          <button>Explore Now</button>
+        </div>
+      </div>
+    </firth-section>
+
+    <seventh-section>
+      <div class="seventh-section">
+        <h4>WHY CHOOSE US</h4>
+        <h1>
+          Contact us now to get the latest <br />
+          deals and for the next booking
+        </h1>
+        <button class="booking_now_btn">
+            Booking Now
+        </button>
+      </div>
+    </seventh-section>
+
+    <eight-section>
+        <div class="eight-section">
+            <div class="left-side-eight">
+                <h4>OUR GALLERY</h4>
+                <h1>Explore the Most Beautiful in the <br>Hotel</h1>
+            </div>
+            <div class="right-side-eight">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <br>
+                    fugiat nulla pariatur. Sunt in culpa qui officia deserunt mollit anim.</p>
+                <button class="view_gallery">
+                    View Gallery
+                </button>
+            </div>
+        </div>
+    </eight-section>
+
+    <gallery-section>
+        <div class="gallery-section">
+            <img src="./image/room3.webp">
+            <img src="./image/room.webp">
+            <img src="./image/room2.webp">
+            <img src="./image/room1.webp">
+        </div>
+
+    </gallery-section>
+
+    <tenth-section>
+        <div class="tenth-section">
+            <div class="title">
+                <h4>NEWS & EVENT</h4>
+                <h1>From Our Blog</h1>
+            </div>
+
+            <div class="blog-section">
+                <img src="./image/blog1.webp">
+                <div class="blog-card">
+                    <h3>Hotel</h3>
+                    <h2>UT eniu ad minim veniam, quis
+                        <br> nostrud
+                    </h2>
+                    <p> 19th March, 2019</p>
+
+                    <h4>Read More</h4>
+                </div>
+                <img src="./image/blog2.webp">
+                <div class="blog-card">
+                    <h3>Hotel</h3>
+                    <h2>UT eniu ad minim veniam, quis
+                        <br> nostrud
+                    </h2>
+                    <p> 19th March, 2019</p>
+
+                    <h4>Read More</h4>
+                </div>
+               
+                <div class="blog-card">
+                    <h3>Hotel</h3>
+                    <h2>UT eniu ad minim veniam, quis
+                        <br> nostrud
+                    </h2>
+                    <p> 19th March, 2019</p>
+
+                    <h4>Read More</h4>
+                    
+                </div>
+                <img src="./image/blog3.webp">
+               
+                <div class="blog-card">
+                    <h3>Hotel</h3>
+                    <h2>UT eniu ad minim veniam, quis
+                        <br> nostrud
+                    </h2>
+                    <p> 19th March, 2019</p>
+
+                    <h4>Read More</h4>
+                </div>
+                <img src="./image/blog4.webp">
+            </div>
+        </div>
+    </tenth-section>
+
+    <footer>
+        <div class="footer-section">
+
+            <div class="conpany-logo">  
+                <img>
+                
+            </div>
+
+        </div>
+    </footer>
+  </body>
+</html>
